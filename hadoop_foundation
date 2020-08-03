@@ -1,0 +1,464 @@
+HADOOP FOUNDATION
+
+Hadoop Introduction:-
+=======================
+What is Hadoop?
+=================
+--> Hadoop is a Bigdata Framework.
+--> It has storage and processing.
+--> For Storage we use HDFS file system.
+--> For processing we have "MapReduce, Pig, Hive, etc..."
+--> Hadoop is implemented using "Java Language"
+--> Hadoop is implemented by "Dough Cutting".
+--> Vendor of Hadoop is "Apache"
+
+=========================================================
+
+What is Bigdata?
+================
+--> Bigdata means Huge Volumes of data which can not be stored and procesed using Tradional Technologies
+    like RDMS and Application Programming with in short time.
+RDBMS:	
+--> RDBMS has limitaion. It does not supoort unlimited storage.
+--> Most of the RDMS filesystem is not distributed file system.
+--> Most of the RDMS is not supoort parralel processing	
+
+Classification of Bigdata:-
+-----------------------------
+--> Bigdata can be classified into three categories. They are:-
+	1. Structured Data(Hadoop and RDMS)
+	2. Semi-Structured Data(Hadoop, Most of the RDMS not supports)
+	3. Un-Structured Data(Hadoop, Most of RDMS not supports)
+
+Structured Data:-
+----------------	
+--> Data has a proper format associated with it.
+    E.g:- Tables(Rows and Columns format)
+	
+--> RDBMS and Hadoop Supports Structured data.
+
+Semi-Structured Data:-
+------------------
+---> Data does not have proper format associated with it.
+     E.g:-XML,JSON,CSV etc..
+---> Most of the RDMS not supports Semi-Structured data but Hadoop Supports Semi-Structured data.	
+
+
+
+Un-Structured Data:-
+------------------
+---> Data does not have any  format associated with it.
+     E.g:- Log files, Chatting data, Reviews, Videos,Audio, Images etc..
+---> Most of the RDBMS not supports  but Hadoop Supports Un-Structured data.
+
+==================================================================================
+Characterstics of Bigdata:-
+--> There are mainly three Characterstics. They are:-
+		1. Volume
+		2. Velocity
+		3. Variety
+
+Volume:-
+-------- 
+--> Huge Volumes of Data. 
+--> Hadoop supports unlimited data.
+--> Thers is no limit in Hadoop cluster.
+--> RDBMS does not support unlimited storage because there is a limit in RDBMS cluster.
+
+Velocity:-
+-----------
+--> How much speed data is growing is called velocity.
+E.g:-
+	--> Facebook generate 200TB data every data.
+	--> In Youtube each minute 48hrs video is uloading
+	--> Twitter processing 400 millions of twitts.
+	--> etc....
+	
+Variety:-
+-----------
+--> Structured, Semi-Structured and Un-Structured
+--> Hadoop supports all kids of data.
+--> RDBMS supports only Structured.
+
+
+Challenges Associated with Bigdata?
+===================================
+--> Storage: There is no technology which stores unlimited data before Hadoop.
+--> Processing: There is Application programming which can process huge volumes of data
+	in very short time or faster.
+
+
+--> Hadoop solved Bigdata problems using HDFS and MapReduce.
+--> HDFS stores unlimited storage. There is no limit in HDFS file system.
+    It is a distributed file system.
+--> MapReduce is a Algorithm, we can implement MapReduce with Java, Python 
+    etc...
+--> MapReduce is a parralel processing architecture.
+===========================================================================================
+
+Diiferent Vendors of Hadoop:
+===============================
+--> Hadoop is implemented using Java
+--> Apache Hadoop is a Opensource and Free
+--> Opensource -- They give complete sourcecode
+--> Based on this opensource many vendors imple hadoop
+
+1. Cloudera -- CDH(Cloudera Distribution Hadoop)
+2. Hortonworks --- HDP (Hadoop/Hortonworks Distributied Platform)
+3. MapR -- MapR Hadoop
+4. Amazon -- EMR (Elastic MapReduce)
+5. IBM -- INfoSphare (BigInsights)
+6. Microsoft -- HDInsights
+etc...
+ 
+	
+--> Recently Cloudera and Hortonworks merged.
+===========================================================================================
+
+Features of Hadoop:-
+====================
+1. Cost Effective:
+===================
+-->  Hadoop Softrware is Free
+-->  Hadoop works on Commodity Hardware
+	 PC < Comomodity  < Server Hardware  (HighEnd or Certified Hardware)
+	 
+2.  Large Cluster of Nodes:
+===========================
+-->  RDBMS has a limitaion in cluster.
+-->  But Hadoop, there is no limitation.
+-->  We can take 'n' no. of machines in Hadoop cluster.	 
+	 
+3. Distributed Data:
+=====================
+--> Hadoopuses "HDFS Filesystem"
+--> It is a Distributed Filesystem
+--> Data divided into multiple blocks and each block placed in different
+    machine.
+
+4. Parallel Processing :
+=========================
+--> MapReduce, Pig, Hive etc.......	processing frameworks
+--> Hadoop process data parallely
+
+5. Automatic Failover Management:-
+==================================
+--> To resolve automatic failover or fault tolerance hadoop maintains three
+    replicas of each block (default).
+--> In Cluster, if machine failed, still we can access hdfs filesystem.
+
+6. Data LOcality Optimization
+--> Application instances are creates in data location.
+--> Data not moves application location, application instances are created in
+    data location.
+--> Map instances are created in multiple machines.	
+	
+	
+7. Hetrogenous cluster :-
+==========================
+--> WE can take any hardware and any OS for machines in cluster.
+--> It is not required to same operating system and same hardware for all 
+	machines.
+8. Scalability:-
+=====================
+--> We can add or remove any number of machines to cluster without putting 
+	cluster in manintenance mode or without stoping cluster.
+--> There is no limit in hadoop cluster
+--> Hadoop supports unlimited storage.
+
+===========================================================================================
+Hadoop Architecture:-
+====================
+	Master/Slave Architecture
+--> Hadoop folows Master/Slave Architecture.
+--> In Hadoop Architecture, there are 5 Daemons involves. They are:
+1. NameNode
+2. SecondaryNameNode
+3. DataNode
+4. Until Hadopp 1.x "JobTRacker", FRom Hadoop 2.x "ResourceManager"
+5. Until Hadoop 1.x "TaskTracker", From Hadoop 2.x "NodeManager"
+
+What is Daemon?
+---------------
+-->  A Daemon is a process, it always runs in the background.
+-->  In  Hadoop Daemon means, it is java programme.
+
+Master Daemons:
+----------------
+1.  NameNode
+2.  SecondaryNameNode
+3.  ResourceManager
+
+Slave Daemons:
+-----------------------
+1. 	DataNode
+2   NodeManager
+
+
+--> It is Highly recommended to take master daemons on seperate machines.
+--> It is Highly recommended to take both slave daemons on same machines.
+	we will take multiple salves.
+===========================================================================================
+
+HDFS Architecture:-
+------------------
+--> It is responsible for storage.
+
+HDFS Daemons:
+--------------
+1. NameNode
+2. SecondaryNameNode
+3. DataNode
+
+
+Master Daemons:-
+-----------------
+1. NameNode
+2. SecondaryNameNode
+
+Slave Daemons:
+--------------------
+1. DataNode
+
+===========================================================================================
+MapReduce Architecture:-
+--> It is responsible for processing.
+--> In hadoop we have two MapReduce Architecture. They are:
+until Hadoop 1.x --- MR1 Architecture 
+1. JobTRacker
+2. TaskTracker
+
+From Hadoop 2.x -- MR2 Architecture (YARN Architecture)
+-------------------------------------------------------
+1. ResourceManager
+2. NodeManager
+
+Master Daemon:
+--------------
+1. ResourceManager
+
+Slave Daemons:
+-------------------
+1. NodeManager
+====================================================================================================
+Hadoop Components:-
+---------------------
+There are 6 important components. They are:
+1. NameNode
+2. SecondaryNameNode
+3. DataNode
+4. Until Hadopp 1.x "JobTRacker", FRom Hadoop 2.x "ResourceManager"
+5. Until Hadoop 1.x "TaskTracker", From Hadoop 2.x "NodeManager"
+6. Client.
+
+--> These 5  Daemons plays very important role in hadoop
+--> Daemon -- It is a Background process.
+
+
+NameNode:-
+---------
+--> NameNode is a HDFS Daemon
+--> It ia sa Master Daemon in HDFS
+--> Client Coomunicates with "NameNode" to store the data.
+--> When NameNode gets storage request, it will read some configuration files.
+	hdfs-site.xml
+		block-size -- 128MB(default)
+		replication-factor - 3(default)
+		
+	slaves  for understanding where is DataNode's.
+		Here we provide complete information of slaves 
+	
+    proximity alogrithm
+		It contains of racks information, bandwidth of each machine.
+		we call this one "rackawarness alogrithm".
+		This alogrithm presented in python script.
+
+The whole metadata file called as fsimage		
+
+--> Then it will prepare meta data
+--> Then it will return metadata to client.
+	
+What is metadata?
+-----------------
+--> Data bout data.
+--> It has file to block , block to DataNode's mapping information.
+======================================================================================
+
+SecondaryNameNode:-
+-------------------
+--> It is  not a backup NameNode.
+--> It is a HDFS Deamon.
+--> It is a Master Daemon in HDFS architecture.
+--> It is also called "CheckpointingNode"
+--> It will perform checkponinting operation.
+--> Merging fsimage and editlog is called "Checkpointing".
+--> Once checkpoint is complted it will erase edit log files.
+
+
+When Checkpointing is happen?
+-----------------------------
+There are two scenarios. They are:
+1. edit log file size -- 1 hour default
+2. thresh-hold time/ no. og entries -- 1 million by default
+
+The start of the checkpoint process on the secondary NameNode is controlled by two configuration parameters.
+
+dfs.namenode.checkpoint.period, set to 1 hour by default, specifies the maximum delay between two consecutive checkpoints, and
+dfs.namenode.checkpoint.txns, set to 1 million by default, defines the number of uncheckpointed transactions on the NameNode which will force an urgent checkpoint, even if the checkpoint period has not been reached. 
+
+Without SecondaryNameNode, NameNode can perform Checkpointing but it is 
+overhead on NameNode.
+
+=====================================================================================================
+DataNode:-
+----------
+--> It is a HDFS Daemon.
+--> It is a slave/worker daemon.
+--> We can take 'n' no. of DataNode's.
+--> The main purpose of DataNode is to store/hold the data.
+--> Client will write data into DataNode.
+--> Once client got metadata information from NameNode, then client will perform
+	hdfs write flow.
+--> It updates its master node saying "I am active and I have so and so blocks",
+	This concept is called "Heart beat signal".
+
+=====================================================================================================
+
+ResourceManager:-
+-----------------
+--> It ia a MapReduce Daemon.
+--> It is a YARN Daemon(MR 2 Architecture, 	it was introduce in Hadoop 2.x)
+--> ResourceManager recieves processing request may be 
+	MapReduce
+	Pig
+	HiveSqoop
+	Spark
+	etc..
+--> Once ResourceManager recieves processing request, it will communicate with
+	NameNode for deatils of client application required file.
+--> Once ResourceManager recieves response from NameNode then based on the 
+	data and locations it will assign tasks to its slaves/worker machines.
+	
+=====================================================================================================
+
+NodeManager:-
+-------------
+--> It is a Slave/Worker Daemon in MapReduce Architecture.
+--> The responsibility of NodeManager is to process client request.
+--> Client request may be 
+	MapReduce
+	Pig
+	Hive
+	Sqoop
+	Spark
+	etc..
+--> Once NodeManager recieves processing request assigned by its masterr 
+	then it will start processing.
+--> NodeManager updates status to it's master saying " I am active, I am executing
+	so and so request/task  and percentage of completion".
+	This process is called heart beat signal in MapReduce.
+	
+=====================================================================================================
+Client:-
+--------
+--> There are two types of clients. They are:-
+1. HDFS Clients
+2. Processing Clients/Application
+
+=====================================================================================================
+HDFS Filesystem:-
+-----------------
+--> HDFS means "Hadoop Distribute Filesystem".
+--> It supports unlimited storage and
+--> It supports parallel processing.
+--> It is a Userspace Filesystem.
+
+What is the difference between Operating System Filesystem(Local Filesystem) and
+HDFS Filesystem?
+--> Operating System Filesystem starts as part operating system process
+--> We can increase or we cannot decrease size of Operating System filesize
+--> But HDFS is Userspace Filesystem, it will start after Operating system started, 
+	it is a user process so we can increase or decrease hdfs filesystem size. It  is 
+	under user control.
+	
+What is Block?
+--------------
+--> It is chunk or peace of data.
+--> When client loads data into hdfs filesystem, data divided into multiple blocks.
+--> Each block placed in different machine.	
+--> The default block size is until  hadoop 1.x -- 64 MB	
+	from hadoop 2.x -- 128MB
+--> This is configurable, we can increase or we can decrease block size in 
+	hdfs-site.xml -- (https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml)
+ 
+    name:dfs.blocksize
+	value:
+--> We can increase as multiples of block size
+	64+64+64+64+64
+	128+128+128+128
+--> In Operating System block size is 4 KB
+	Latest Block 8KB
+
+What is the advantage of large block size?
+--------------------------------------------
+--> reading/seeeking time is very faster.
+
+
+What is Replication or What is Replication-Factor?
+---------------------------------------------------
+--> Replication means -- duplicate copy
+--> Replication-Factor -- how many duplicate copies of block
+--> By default hadoop create "3" replicas.
+--> We can increase or decrease replication-factor.
+	In hdfs-site.xml
+	name: dfs.replication-factor
+	value: 3
+--> The main advantage of replication is we can solve fault-tolerance
+    even we can access hdfs filesystem if any machine down or fail or crash	
+	
+Under Replication:-
+-------------------
+--> The blocks under < Replication-Factor is called "Under Replicated Blocks"
+--> Assume DataNode 3 is failed, the blocks under failed node comes into  under 
+	"Under Replication" block.
+--> NameNode maintains undereplicvated blocks information in NameNode machine.	
+--> Then NameNode will ask DataNode machines to replicate "underreplicated blocks"
+--> Assume DataNode accepted to replicate "b3" and DataNode2 accepted to replicate 
+	block1.
+--> At any point of time NameNode tries to maintain replication-factor.
+
+Over Replication:-
+-------------------
+--> The blocks which are > replication is called "Over Replicated" blocks.
+--> NameNode wil ask 
+	For Block1 -- DataNode1,2,3,5 to remove block1.
+	For Block3 -- DataNode1,3,4 and 5 to remove block1.
+	Assume DataNode 3 accepted to remove Block 1, 3
+--> At any point of time NameNode tries to maintain replication-factor.
+==================================================================================
+HDFS Write Flow:-
+-----------------
+--> When client wants to write file into HDFS filesystem client will perform
+	HDFS Write Flow.
+--> First Client Communicate with NameNode and ngets the blocks and DataNodes 
+	information and writes into HDFS Filesystem.
+	
+HDFS Read Flow:-
+-----------------
+--> When client want to read HDFS filesystem
+	may HDFS CLI Command
+		MapReduce
+		Pig
+		Hive
+		ect...
+--> First Client Communicates with NameNode and gets Filesystem metadata
+--> NameNode return Metadata like
+	f1--b1--1,3,5
+	f1--b2--2,4,6
+	f1--b3--3,4,5
+	
+--> Client reads 
+		b1 from DataNode1
+		b2 from DataNode2
+		b3 from DataNode3
+	
